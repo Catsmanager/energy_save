@@ -1,0 +1,24 @@
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 상단에 위치시키기 위한 설정 */
+    align-items: center; /* 중앙 정렬 */
+    height: 100vh; /* 전체 화면 높이 */
+    padding: 20px; /* 여백 추가 */
+}
+
+.image-upload-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ocr-result {
+    margin-top: 20px;
+    text-align: center;
+}

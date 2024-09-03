@@ -1,0 +1,52 @@
+.camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+  }
+  
+  .camera-frame {
+    position: relative;
+    width: 80%;
+    max-width: 350px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+  }
+  
+  .camera-video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .guide-box {
+    position: absolute;
+    top: 50%; /* 가이드 박스의 상단 위치 */
+    left: 50%; /* 가이드 박스의 좌측 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    width: 30%; /* 가이드 박스의 너비 (정사각형 비율) */
+    height: 45%; /* 가이드 박스의 높이 (조금 늘림) */
+    border: 2px solid red; /* 가이드 박스의 테두리 색상 */
+    box-sizing: border-box;
+  }
+
+  .camera-canvas {
+    display: none;
+  }
+  
+  .capture-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
