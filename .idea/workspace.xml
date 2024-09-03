@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dfff78e1-0aae-4421-8bd3-17061c21736a" name="Changes" comment="jwt 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/config/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/config/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,32 +98,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Springboot.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build Project.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [:Springboot.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [bootRun].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [clean build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [wrapper --gradle-version 8.8.1].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [wrapper --gradle-version 8.8].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Project [wrapper --gradle-version &lt;latest-version&gt;].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#1 on backend&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/이미림/IdeaProjects/Project&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/이미림/IdeaProjects/Project/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Springboot.executor": "Run",
+    "Gradle.Build Project.executor": "Run",
+    "Gradle.Project [:Main.main()].executor": "Run",
+    "Gradle.Project [:Springboot.main()].executor": "Run",
+    "Gradle.Project [bootRun].executor": "Run",
+    "Gradle.Project [build].executor": "Run",
+    "Gradle.Project [clean build].executor": "Run",
+    "Gradle.Project [clean].executor": "Run",
+    "Gradle.Project [dependencies].executor": "Run",
+    "Gradle.Project [wrapper --gradle-version 8.8.1].executor": "Run",
+    "Gradle.Project [wrapper --gradle-version 8.8].executor": "Run",
+    "Gradle.Project [wrapper --gradle-version <latest-version>].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "#1 on Merging backend",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/이미림/IdeaProjects/Project",
+    "onboarding.tips.debug.path": "C:/Users/이미림/IdeaProjects/Project/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.backend.controller" />
@@ -269,6 +269,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="dfff78e1-0aae-4421-8bd3-17061c21736a" name="Changes" comment="" />
