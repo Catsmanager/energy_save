@@ -7,24 +7,5 @@ const Main = () => {
     </main>
   );
 };
-// const Main = () => {
-//   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-//   const handleLogin = (status) => {
-//     setIsLoggedIn(status);
-//   };
-
-//   return (
-//     <main>
-//       {isLoggedIn ? (
-//         <p>로그인 되었습니다.</p>
-//       ) : (
-//         <>
-//           <Login onLogin={handleLogin} />
-//         </>
-//       )}
-//     </main>
-//   );
-// };
 
 export default Main;
