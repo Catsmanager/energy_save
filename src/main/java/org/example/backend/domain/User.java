@@ -14,6 +14,23 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "user")
 @Data
@@ -32,10 +49,14 @@ public class User implements UserDetails {
     @Column(name = "password")
     private String password;
 
+    // 권한 정보를 반환하는 메서드
     @Override
-    // 사용자의 권한을 반환 (빈 리스트 반환하여 권한 없음)
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.emptyList();
+        // 예를 들어, 'USER' 역할을 반환하도록 설정
+        // 필요에 따라 역할을 추가하거나 변경할 수 있습니다.
+        Set<GrantedAuthority> authorities = new HashSet<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+        return authorities;
     }
 
     @Override

@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfff78e1-0aae-4421-8bd3-17061c21736a" name="Changes" comment="" />
+    <list default="true" id="dfff78e1-0aae-4421-8bd3-17061c21736a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/example/backend/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/example/backend/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/example/backend/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/example/backend/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/example/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/example/backend/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/example/backend/domain/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/example/backend/domain/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/example/backend/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/example/backend/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/example/backend/service/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/example/backend/service/UserDetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/example/backend/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/example/backend/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/service/UserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/service/UserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,32 +130,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Springboot.executor": "Run",
-    "Gradle.Build Project.executor": "Run",
-    "Gradle.Project [:Main.main()].executor": "Run",
-    "Gradle.Project [:Springboot.main()].executor": "Run",
-    "Gradle.Project [bootRun].executor": "Run",
-    "Gradle.Project [build].executor": "Run",
-    "Gradle.Project [clean build].executor": "Run",
-    "Gradle.Project [clean].executor": "Run",
-    "Gradle.Project [dependencies].executor": "Run",
-    "Gradle.Project [wrapper --gradle-version 8.8.1].executor": "Run",
-    "Gradle.Project [wrapper --gradle-version 8.8].executor": "Run",
-    "Gradle.Project [wrapper --gradle-version <latest-version>].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "backend",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/이미림/IdeaProjects/Project",
-    "onboarding.tips.debug.path": "C:/Users/이미림/IdeaProjects/Project/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Springboot.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build Project.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [:Springboot.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [clean build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [wrapper --gradle-version 8.8.1].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [wrapper --gradle-version 8.8].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Project [wrapper --gradle-version &lt;latest-version&gt;].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#1 on backend&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/이미림/IdeaProjects/Project&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/이미림/IdeaProjects/Project/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.backend.controller" />
@@ -292,7 +327,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/backend/service/UserService.java</url>
-          <line>43</line>
+          <line>61</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

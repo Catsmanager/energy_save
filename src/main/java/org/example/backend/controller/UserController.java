@@ -1,9 +1,9 @@
 package org.example.backend.controller;
 
-import org.example.backend.dto.EmailCheckRequest;
-import org.example.backend.dto.EmailCheckResponse;
-import org.example.backend.dto.UserDTO;
+import org.example.backend.dto.*;
 import org.example.backend.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     // UserService 인스턴스를 주입받음
     private final UserService userService;
+
     // 생성자 주입을 통해 UserService를 설정
     public UserController(UserService userService) {
         this.userService = userService;
     }
+
     // 이메일 중복 체크를 위한 엔드포인트
     @PostMapping("/check/email")
     public ResponseEntity<EmailCheckResponse> checkEmail(@RequestBody EmailCheckRequest request) {
@@ -24,6 +26,7 @@ public class UserController {
         // 결과를 담은 EmailCheckResponse 객체를 반환
         return ResponseEntity.ok(new EmailCheckResponse(exists));
     }
+
     // 사용자 등록을 위한 엔드포인트
     @PostMapping("/signup")
     public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO) {
@@ -31,5 +34,11 @@ public class UserController {
         UserDTO createdUser = userService.createUser(userDTO);
         // 생성된 사용자 정보를 반환
         return ResponseEntity.ok(createdUser);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> loginUser(@RequestBody LoginRequestDTO loginRequestDTO) {
+        String jwtToken = userService.loginUser(loginRequestDTO);
+        return ResponseEntity.ok(jwtToken);
     }
 }
