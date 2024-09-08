@@ -1,0 +1,52 @@
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 가운데 정렬 */
+    height: 100vh;
+    padding: 20px; /* 여백 조정 */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.main-content {
+    padding-top: 60px; /* 헤더 높이만큼 상단 여백을 추가 */
+}
+
+.question {
+    font-size: 24px;
+    margin-bottom: 20px; /* 버튼과 간격 조정 */
+    text-align: center;
+}
+
+.answer-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px; /* 질문과 버튼 간격 조정 */
+}
+
+.answer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.answer-box:hover {
+    background-color: #ddd;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}

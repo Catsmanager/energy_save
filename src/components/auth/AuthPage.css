@@ -1,0 +1,178 @@
+/* 기본 스타일 */
+.login-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-html {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 15px;
+  /* 배경색과 그림자 제거 */
+  /* background: #fff; */
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+}
+
+body {
+  background: #f0f0f0; /* 전체 페이지 배경색 */
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 텍스트와 버튼 모두 왼쪽 정렬 */
+  align-items: center; /* 중앙 정렬 */
+  margin-bottom: 20px;
+}
+
+.social-button {
+  background: #ddd;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0 10px; /* 버튼들 사이의 간격 조정 */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center; /* 버튼들을 가로로 중앙에 정렬 */
+}
+
+.instagram-button {
+  background: #E1306C;
+}
+
+.google-button {
+  background: #DB4437;
+}
+
+.github-button {
+  background: #333;
+}
+
+/* 모든 소셜 버튼 아이콘의 색상을 동일하게 설정 */
+.social-button i {
+  font-size: 20px;
+  color: #fff; /* 아이콘 색상 흰색 */
+}
+
+/* 호버 시 버튼이 약간 커지는 효과 */
+.social-button:hover {
+  background-color: #bbb; /* 배경색이 조금 더 밝아짐 */
+  transform: scale(1.1); /* 살짝 커지는 효과 */
+}
+
+.or-separator {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.or-separator span {
+  background: #f0f0f0; /* 배경색과 일치시킴 */
+  padding: 0 10px;
+  font-size: 14px;
+  color: #787474;
+  position: relative;
+  z-index: 1;
+}
+
+.or-separator::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #787474;
+  z-index: 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  margin-bottom: 20px;
+  margin-left: 0%; /* 왼쪽으로 이동 (넓이에 따라 조정) */
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input {
+  width: 80%;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1); /* 입력 전 배경색 */
+  color: #000; /* 입력된 글자의 색상 */
+  font-size: 16px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2); /* 기본 그림자 */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* 애니메이션 추가 */
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.6); /* placeholder 색상 */
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 0.2); /* 포커스 시 배경 색상 */
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5); /* 포커스 시 그림자 */
+  border-color: #ff7f50; /* 포커스 시 테두리 색상 */
+  outline: none; /* 기본 아웃라인 제거 */
+}
+
+.input:not(:placeholder-shown) {
+  background: rgba(255, 255, 255, 0.3); /* 입력 시 배경 색상 */
+}
+
+.check {
+  margin-right: 5px;
+}
+
+.button {
+  width: 200%; /* 버튼의 넓이 조정 */
+  padding: 15px;
+  border: none;
+  border-radius: 55px;
+  background: #42b846; /* 연두색 계열 */
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: -50%; /* 왼쪽으로 이동 (넓이에 따라 조정) */
+}
+
+.button:hover {
+  background: #388e3c; /* 더 진한 연두색 계열 */
+}
+
+.foot-lnk {
+  text-align: center;
+}
+
+.foot-lnk p {
+  margin: 0;
+}
+
+.foot-lnk span {
+  color: orange;
+  cursor: pointer;
+}
+

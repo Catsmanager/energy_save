@@ -1,0 +1,31 @@
+.main-page {
+    padding-bottom: 60px; /* 바를 위한 공간 확보 */
+  }
+
+  .main-content {
+    padding-top: 60px; /* 헤더 높이만큼 상단 여백을 추가 */
+}
+  
+  .content {
+    padding: 20px;
+  }
+  .energy-saving-tip, .weekly-quest {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  
+  .energy-saving-tip h2, .weekly-quest h2 {
+    margin-bottom: 10px;
+  }
+  
+  .weekly-quest ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .weekly-quest li {
+    margin-bottom: 5px;
+  }
+  
