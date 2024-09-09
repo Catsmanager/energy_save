@@ -23,18 +23,19 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
     private final JwtFactory jwtFactory; // 생성자 주입을 위한 필드
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) //  HTTP 요청을 가로채고 JWT를 검사하는 작업을 수행합니다.
             throws IOException, ServletException {
 
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
         String token = httpRequest.getHeader("Authorization");
-        if (token != null && token.startsWith("Bearer ")) {
-            token = token.substring(7);
+        if (token != null && token.startsWith("Bearer ")) { //  JWT 토큰은 일반적으로 "Bearer {token}" 형식으로 전달
+            token = token.substring(7); // "Bearer " 부분을 제거하고 실제 토큰 값만 추출
 
             if (jwtFactory.validToken(token)) {
                 String username = jwtFactory.getUserId(token); // 여기서 사용자 ID를 가져옵니다.
+                //  객체를 생성하여 Spring Security의 인증 객체로 설정합니다. 여기서 ROLE_USER라는 단일 권한을 부여합니다.
                 UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
                         username, null, Collections.singleton(new SimpleGrantedAuthority("ROLE_USER")));
 
@@ -43,6 +44,6 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
             }
         }
 
-        chain.doFilter(request, response);
+        chain.doFilter(request, response); // 필터 체인의 다음 필터를 호출하여, 요청이 계속 처리
     }
 }
