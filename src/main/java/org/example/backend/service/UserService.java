@@ -4,10 +4,9 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.example.backend.config.jwt.JwtFactory;
 import org.example.backend.domain.User; // 도메인 클래스의 패키지 경로를 확인하여 수정하세요.
-import org.example.backend.dto.LoginRequestDTO;
-import org.example.backend.dto.UserDTO;
+import org.example.backend.dto.auth.LoginRequestDTO;
+import org.example.backend.dto.auth.UserDTO;
 import org.example.backend.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 

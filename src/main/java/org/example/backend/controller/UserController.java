@@ -1,9 +1,10 @@
 package org.example.backend.controller;
 
-import org.example.backend.dto.*;
+import org.example.backend.dto.auth.EmailCheckRequest;
+import org.example.backend.dto.auth.EmailCheckResponse;
+import org.example.backend.dto.auth.LoginRequestDTO;
+import org.example.backend.dto.auth.UserDTO;
 import org.example.backend.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
