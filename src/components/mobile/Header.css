@@ -1,0 +1,43 @@
+/* src/components/mobile/Header.css */
+
+/* 모바일 헤더 스타일 */
+.app-header.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #388e3c;
+  color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 35px; /* 모바일 헤더 높이 */
+  z-index: 1000;
+}
+
+/* 로고와 아이콘을 수평으로 정렬 */
+.mobile-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* 양쪽 여백 추가 */
+}
+
+/* 로고 스타일 */
+.mobile-header .logo-title {
+  color: #f0f0f0; /* 로고 색상 설정 */
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* 아이콘 스타일 */
+.mobile-header .header-icons i {
+  margin-left: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #f0f0f0; /* 아이콘 색상 설정 (하얀색) */
+}

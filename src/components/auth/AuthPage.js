@@ -23,8 +23,8 @@ const AuthPage = () => {
         password: password,
       });
 
-      console.log('로그인 성공:', response.data);
-      navigate('/main'); // 로그인 성공 시 메인 페이지로 이동
+      //console.log('로그인 성공:', response.data);
+      navigate('/main', { state: { email } });
     } catch (error) {
       console.error('로그인 실패:', error.response ? error.response.data : error.message);
       setError('로그인에 실패했습니다. 다시 시도해주세요.');
@@ -144,8 +144,33 @@ const AuthPage = () => {
               {error && <p style={{ color: 'red' }}>{error}</p>} {/* 에러 메시지 표시 */}
             </form>
 
-            <div className="foot-lnk">
-              <p>계정이 없나요? <span onClick={() => setIsLogin(false)} style={{ color: '#42b846', cursor: 'pointer' }}>Create Account</span></p>
+                    <div className="foot-lnk">
+              <p>
+                계정이 없나요?{' '}
+                <span
+                  onClick={() => setIsLogin(false)}
+                  style={{ color: '#42b846', cursor: 'pointer' }}
+                >
+                  Create Account
+                </span>
+              </p>
+              {/* 한 줄 띄우기 */}
+              <br />
+              <p>
+                <span
+                  onClick={() => navigate('/search_email')}
+                  style={{ color: 'black', cursor: 'pointer', marginRight: '10px' }}
+                >
+                  이메일을 잊었나요?
+                </span>
+                /
+                <span
+                  onClick={() => navigate('/search_password')}
+                  style={{ color: 'black', cursor: 'pointer', marginLeft: '10px' }}
+                >
+                  비밀번호를 잊었나요?
+                </span>
+              </p>
             </div>
           </div>
 

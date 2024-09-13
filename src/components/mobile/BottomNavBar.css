@@ -1,0 +1,40 @@
+/* src/components/main/BottomNavBar.css */
+.bottom-nav {
+  display: none; /* 기본적으로 숨김 */
+}
+
+@media (max-width: 992px) {
+  .bottom-nav {
+      display: flex; /* 모바일 화면에서만 보이게 설정 */
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0; /* 왼쪽을 고정하여 공간 없이 설정 */
+      width: 100%;
+      background-color: #388e3c;
+      color: white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bottom-nav button i {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.bottom-nav button span {
+  font-size: 12px;
+}

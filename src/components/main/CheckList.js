@@ -1,164 +1,113 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-// 주간 퀘스트 데이터를 제공하는 함수
-function getWeeklyQuests() {
-  return [
-    { id: 1, text: "Reduce water usage by 10%", completed: false },
-    { id: 2, text: "Use public transportation 3 times", completed: false },
-    { id: 3, text: "Unplug unused electronics", completed: false },
-  ];
-}
-
-function WeeklyQuest() {
-  const [quests, setQuests] = useState([]);
-  const [newQuest, setNewQuest] = useState(""); // 사용자가 입력하는 퀘스트 텍스트
+const Checklist = ({ email }) => {
+  const navigate = useNavigate();
+  const [tasks, setTasks] = useState([]);  // 초기값을 빈 배열로 설정
+  const [newTask, setNewTask] = useState("");
+  const [username, setUsername] = useState("");  // username을 저장할 상태 변수 추가
 
   useEffect(() => {
-    // localStorage에서 퀘스트 가져오기
-    const savedQuests = JSON.parse(localStorage.getItem('quests')) || getWeeklyQuests();
-    const lastReset = localStorage.getItem('lastReset');
-    const now = new Date();
-
-    // 하루가 지났으면 퀘스트 리셋
-    if (!lastReset || new Date(lastReset).getDate() !== now.getDate()) {
-      localStorage.setItem('lastReset', now.toISOString()); // 리셋 시간 기록
-      setQuests(getWeeklyQuests()); // 퀘스트 리셋
-    } else {
-      setQuests(savedQuests);
+    if (!email) {
+      navigate();  // email이 없으면 로그인 페이지로 리디렉트
+      return;
     }
-  }, []);
 
-  useEffect(() => {
-    // 퀘스트가 업데이트될 때마다 localStorage에 저장
-    localStorage.setItem('quests', JSON.stringify(quests));
-  }, [quests]);
+    const fetchTasks = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8080/api/checklist/user/${email}`, {
+          headers: { 'Content-Type': 'application/json' }
+        });
 
-  const completeQuest = (id) => {
-    setQuests((prevQuests) =>
-      prevQuests.map((quest) =>
-        quest.id === id ? { ...quest, completed: true } : quest
-      )
-    );
+        // 응답이 배열인지 확인하고 배열이 아닌 경우 빈 배열로 처리
+        const taskData = Array.isArray(response.data.tasks) ? response.data.tasks : [];
+        setTasks(taskData);
+
+        // 응답에서 username 추출 및 상태에 저장
+        const fetchedUsername = response.data.username || "";
+        setUsername(fetchedUsername);
+
+      } catch (error) {
+        console.error('Error fetching tasks:', error);
+        setTasks([]);  // 에러 발생 시에도 빈 배열로 설정
+      }
+    };
+
+    fetchTasks();
+  }, [email, navigate]);
+
+  // 새로운 작업 추가
+  const addTask = async () => {
+    try {
+      const response = await axios.post('http://localhost:8080/api/checklist/add', 
+        { email, text: newTask }, 
+        { headers: { 'Content-Type': 'application/json' } }
+      );
+      setTasks([response.data, ...tasks]);  // 새 작업이 맨 위에 추가되도록 설정
+      setNewTask("");
+    } catch (error) {
+      console.error('Error adding task:', error);
+    }
   };
 
-  const addQuest = () => {
-    if (newQuest.trim() !== "") {
-      setQuests((prevQuests) => [
-        ...prevQuests,
-        { id: Date.now(), text: newQuest, completed: false },
-      ]);
-      setNewQuest(""); // 입력 필드 리셋
+  // 작업 삭제
+  const deleteTask = async (id) => {
+    try {
+      await axios.delete(`http://localhost:8080/api/checklist/delete/${id}`);
+      setTasks(tasks.filter(task => task.id !== id));
+    } catch (error) {
+      console.error('Error deleting task:', error);
     }
   };
 
-  const deleteQuest = (id) => {
-    setQuests((prevQuests) => prevQuests.filter((quest) => quest.id !== id));
+  // 작업 완료 상태 변경
+  const toggleTaskCompletion = async (id, completed) => {
+    try {
+      // 클라이언트에서 상태를 즉시 업데이트
+      setTasks(tasks.map(task =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      ));
+
+      // 서버에 상태 업데이트 요청
+      await axios.put(`http://localhost:8080/api/checklist/update/${id}`, { completed: !completed });
+    } catch (error) {
+      console.error('Error updating task:', error);
+    }
   };
 
   return (
-    <div className="weekly-quest">
-      <h2>This Week's Quests</h2>
+    <div>
+      <h2>{`Today's Checklist`}</h2>
+      
+      {/* 새로운 작업 추가 입력 필드와 버튼 */}
+      <input 
+        type="text" 
+        value={newTask} 
+        onChange={e => setNewTask(e.target.value)} 
+        placeholder="New Task" 
+      />
+      <button onClick={addTask}>Add Task</button>
+      
       <ul>
-        {quests.map((quest) => (
-          <li key={quest.id}>
-            <label>
-              <input
-                type="checkbox"
-                checked={quest.completed}
-                disabled={quest.completed}
-                onChange={() => completeQuest(quest.id)}
+        {tasks.length > 0 ? (
+          tasks.map(task => (
+            <li key={task.id} style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+              <input 
+                type="checkbox" 
+                checked={task.completed} 
+                onChange={() => toggleTaskCompletion(task.id, task.completed)} 
               />
-              <span style={{ textDecoration: quest.completed ? 'line-through' : 'none' }}>
-                {quest.text}
-              </span>
-            </label>
-            <button onClick={() => deleteQuest(quest.id)}>삭제</button> {/* 삭제 버튼 */}
-          </li>
-        ))}
+              {task.text}
+              <button onClick={() => deleteTask(task.id)}>Delete</button>
+            </li>
+          ))
+        ) : (
+          <li>오늘 할 일이 없습니다.</li>
+        )}
       </ul>
-      <div>
-        <input
-          type="text"
-          value={newQuest}
-          onChange={(e) => setNewQuest(e.target.value)}
-          placeholder="새 퀘스트 추가"
-        />
-        <button onClick={addQuest}>추가</button> {/* 퀘스트 추가 버튼 */}
-      </div>
     </div>
   );
-}
+};
 
-export default WeeklyQuest;
-
-
-// import React, { useState, useEffect } from 'react';
-
-// // 주간 퀘스트 데이터를 제공하는 함수
-// function getWeeklyQuests(weekNumber) {
-//   const allQuests = [
-//     [
-//       { id: 1, text: "Reduce water usage by 10%", completed: false },
-//       { id: 2, text: "Use public transportation 3 times", completed: false },
-//       { id: 3, text: "Unplug unused electronics", completed: false },
-//     ],
-//     [
-//       { id: 1, text: "Use energy-efficient light bulbs", completed: false },
-//       { id: 2, text: "Reduce shower time by 5 minutes", completed: false },
-//       { id: 3, text: "Turn off electronics when not in use", completed: false },
-//     ],
-//     [
-//       { id: 1, text: "Install a programmable thermostat", completed: false },
-//       { id: 2, text: "Run your dishwasher only when full", completed: false },
-//       { id: 3, text: "Switch to reusable shopping bags", completed: false },
-//     ],
-//     // 주간퀘스트 추가 가능..
-//   ];
-
-//   return allQuests[weekNumber % allQuests.length];
-// }
-
-// function WeeklyQuest() {
-//   const [quests, setQuests] = useState([]);
-
-//   useEffect(() => {
-//     const now = new Date();
-//     const startOfYear = new Date(now.getFullYear(), 0, 1);
-//     const weekNumber = Math.floor((now - startOfYear) / (7 * 24 * 60 * 60 * 1000));
-//     const weeklyQuests = getWeeklyQuests(weekNumber);
-//     setQuests(weeklyQuests);
-//   }, []);
-
-//   const completeQuest = (id) => {
-//     setQuests((prevQuests) =>
-//       prevQuests.map((quest) =>
-//         quest.id === id ? { ...quest, completed: true } : quest
-//       )
-//     );
-//   };
-
-//   return (
-//     <div className="weekly-quest">
-//       <h2>This Week's Quests</h2>
-//       <ul>
-//         {quests.map((quest) => (
-//           <li key={quest.id}>
-//             <label>
-//               <input
-//                 type="checkbox"
-//                 checked={quest.completed}
-//                 disabled={quest.completed}
-//                 onChange={() => completeQuest(quest.id)}
-//               />
-//               <span style={{ textDecoration: quest.completed ? 'line-through' : 'none' }}>
-//                 {quest.text}
-//               </span>
-//             </label>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default WeeklyQuest;
+export default Checklist;

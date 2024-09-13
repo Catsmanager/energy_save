@@ -5,13 +5,11 @@ import smooth from "./utils/smooth";
 import link from "./utils/link";
 import AuthPage from './components/auth/AuthPage';
 import Main from './components/Main';
-import Login from './components/auth/Login';
-import Signup from './components/auth/Signup';
 import ImageUploadCard from './components/card/ImageUploadCard';
 import Quiz from './components/quiz/Quiz';
 import Profile from './components/pages/Profile';
 import DailyQuest from './components/pages/DailyQuest';
-import BottomNavBar from './components/main/BottomNavBar';
+import BottomNavBar from './components/mobile/BottomNavBar';
 
 const App = () => {
   const [userList, setUserList] = useState([]); // userList 상태를 App.js에서 관리
@@ -31,8 +29,7 @@ const App = () => {
     <div className="App">
       <Routes>
         <Route path="/" element={<AuthPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup userList={userList} setUserList={setUserList} />} />
+        <Route path="/signup" element={<AuthPage userList={userList} setUserList={setUserList} />} />
         <Route path="/main" element={<Main />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/quest" element={<DailyQuest />} />

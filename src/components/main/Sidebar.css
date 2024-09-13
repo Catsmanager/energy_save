@@ -1,0 +1,31 @@
+/* src/components/main/Sidebar.css */
+
+.sidebar {
+    width: 250px; /* 사이드바의 너비 */
+    height: 100vh; /* 화면 전체 높이 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ffffff; /* 사이드바 배경 색상 */
+    border-right: 0.5px solid rgba(0, 0, 0, 0.1); /* 좌측에 선 그리기 */
+    z-index: 500; /* 헤더보다 낮게 설정 */
+  }
+  
+  .sidebar-menu {
+    list-style-type: none; /* 기본 목록 스타일 제거 */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    margin: 20px 0; /* 항목 간의 여백 */
+  }
+  
+  .sidebar-menu a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #333; /* 링크 색상 */
+    font-size: 18px; /* 폰트 크기 */
+    display: block; /* 블록 요소로 설정하여 클릭 영역 확대 */
+    padding: 10px 20px; /* 항목 내 여백 */
+  }
+  
