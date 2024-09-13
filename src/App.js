@@ -30,7 +30,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<AuthPage />} />
         <Route path="/signup" element={<AuthPage userList={userList} setUserList={setUserList} />} />
-        <Route path="/main" element={<Main />} />
+        <Route path="/main/*" element={<Main />} /> {/* 메인 레이아웃 */}
         <Route path="/profile" element={<Profile />} />
         <Route path="/quest" element={<DailyQuest />} />
         <Route path="/imageupload" element={<ImageUploadCard />} />

@@ -1,0 +1,63 @@
+/* Calendar.css */
+
+.calendar {
+    width: calc(100% - 250px); /* 사이드바 너비만큼 여백을 빼서 사이드바와 겹치지 않게 */
+    margin-left: 250px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
+    height: 100%; /* 콘텐츠 영역에 맞추기 */
+    border: none; /* 상단 테두리 제거 */
+    box-sizing: border-box; /* 테두리와 패딩을 너비에 포함 */
+    overflow: auto; /* 스크롤 가능 */
+    position: relative; /* 자식 요소의 절대 위치를 위해 설정 */
+}
+
+.header {
+    position: absolute; /* 달력의 상단에 고정 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 달력의 전체 너비에 맞춤 */
+    background: #ffffff;
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    align-items: center;
+    padding: 10px;
+    border-bottom:; /* 헤더 아래쪽 테두리 유지 */
+    box-sizing: border-box; /* 테두리와 패딩을 너비에 포함 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 열 너비 고정 */
+    margin-top: 60px; /* 헤더의 높이만큼 여백 추가 */
+}
+
+thead th {
+    background: #eee;
+    padding: 5px; /* 패딩 줄이기 */
+    border-bottom: 1px solid #ddd;
+    height: 40px; /* 높이 줄이기 */
+}
+
+tbody td {
+    width: 14.28%; /* 100% / 7 days */
+    height: 113px; /* 셀 높이 줄이기 */
+    text-align: center;
+    vertical-align: top;
+    padding: 5px; /* 패딩 줄이기 */
+    border: 1px solid #ddd;
+}
+
+.month-year {
+    margin-left: 30px; /* 월과 년도 오른쪽 여백 추가 */
+    font-size: 30px; /* 글씨 크기 설정 */
+    font-weight: bold;
+}
+
+.empty {
+    background: #f9f9f9;
+}
+
+.day:hover {
+    background: #f0f0f0;
+    cursor: pointer;
+}

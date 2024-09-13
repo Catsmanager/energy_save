@@ -20,7 +20,7 @@
     right: 0;
     height: 50px; /* 헤더의 고정된 높이를 설정 */
     z-index: 1000; /* 다른 요소보다 위에 표시되도록 설정 */
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); /* 얇은 선 */
+    border-bottom: 0.2px solid rgba(0, 0, 0, 0.1); /* 얇은 선 */
     margin-left: 250px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
   }
 
