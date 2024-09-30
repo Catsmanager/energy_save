@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../../components/Header'; // Header 컴포넌트 가져오기
+import Header from '../Header'; // Header 컴포넌트 가져오기
 import '../styles/Quiz.css';
 
 function Quiz() {
