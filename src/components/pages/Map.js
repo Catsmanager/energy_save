@@ -29,7 +29,7 @@ const Map = () => {
         });
 
         const createMarkerImage = () => {
-          const markerImageSrc = './assets/marker.png';
+          const markerImageSrc = '/marker.png';
           const imageSize = new window.kakao.maps.Size(30, 46);
           return new window.kakao.maps.MarkerImage(markerImageSrc, imageSize);
         };
