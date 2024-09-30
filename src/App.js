@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'r
 import './App.css';
 import AuthPage from './components/auth/AuthPage';
 import Main from './components/Main';
-import ImageUploadCard from './components/card/ImageUploadCard';
-import Quiz from './components/pages/Quiz';
+import ImageUploadCard from './components/pages/quest/ImageUploadCard';
+import Quiz from './components/pages/quest/Quiz';
 import Profile from './components/pages/Profile';
 import DailyQuest from './components/pages/DailyQuest';
 import BottomNavBar from './components/mobile/BottomNavBar';
