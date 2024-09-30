@@ -1,0 +1,44 @@
+plugins {
+    id 'org.springframework.boot' version '3.1.4'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    // 스프링 시큐리티를 사용하기 위한 스타터
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    // 스프링 시큐리티를 테스트하기 위한 의존성 추가
+    testImplementation 'org.springframework.security:spring-security-test'
+    // 로그인 토큰
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+
+    // Google Cloud Vision API 추가
+    implementation 'com.google.cloud:google-cloud-vision:3.6.0'
+    // Apache Commons IO 추가 (이미지 파일 처리 등을 위해)
+    implementation 'commons-io:commons-io:2.11.0'
+
+    // Tess4J (Tesseract OCR Java 래퍼)
+    implementation 'net.sourceforge.tess4j:tess4j:4.5.5'
+
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'org.glassfish.jaxb:jaxb-core:2.3.0'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.0'
+}
+
+test {
+    useJUnitPlatform()
+}
