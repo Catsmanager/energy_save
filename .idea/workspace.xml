@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfff78e1-0aae-4421-8bd3-17061c21736a" name="Changes" comment="햐" />
+    <list default="true" id="dfff78e1-0aae-4421-8bd3-17061c21736a" name="Changes" comment="add attendance">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,12 +82,12 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="ebe7bc9c-765f-4f59-bd59-737d47d7f709" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Catsmanager/energy_save.git",
-    "accountId": "ebe7bc9c-765f-4f59-bd59-737d47d7f709"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Catsmanager/energy_save.git&quot;,
+    &quot;accountId&quot;: &quot;ebe7bc9c-765f-4f59-bd59-737d47d7f709&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -110,7 +112,7 @@
     &quot;Gradle.Project [wrapper --gradle-version 8.8].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Project [wrapper --gradle-version &lt;latest-version&gt;].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#1 on backend&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/이미림/IdeaProjects/Project&quot;,
@@ -118,7 +120,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
