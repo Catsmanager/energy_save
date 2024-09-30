@@ -34,7 +34,7 @@ const DailyQuest = () => {
       <div className="main-content">
         <div className="daily-quest">
           <div className="quest-list">
-            <h3>☘ 돌보미의 오늘 할 일 ☘</h3>
+            <h3>🌱 돌보미의 오늘 할 일 🌱</h3>
             <p>주간 자정에 초기화됩니다</p>
             {quests.map((quest, index) => (
               <div

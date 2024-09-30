@@ -47,6 +47,7 @@ function Sidebar() {
         <i className="fas fa-bolt logo-icon"></i>
         <span>Save</span>
       </h1>
+      <hr className="divider" /> {/* 분리선 추가 */}
       <ul className="sidebar-menu">
         <li
           className={active === '/home' ? 'active' : ''}
@@ -84,67 +85,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
-
-// import React, { useState, useEffect } from 'react';
-// import { useNavigate, useLocation } from 'react-router-dom';
-// import './Sidebar.css';
-
-// function Sidebar() {
-//   const navigate = useNavigate();
-//   const location = useLocation();
-//   const [active, setActive] = useState(location.pathname);
-
-//   useEffect(() => {
-//     // 페이지가 변경될 때 active 상태를 업데이트
-//     setActive(location.pathname);
-//   }, [location]);
-
-//   const handleNavigation = (path) => {
-//     navigate(path);
-//   };
-
-//   return (
-//     <div className="sidebar">
-//       <h1 className="logo-title">
-//         <span>Energy</span>
-//         <i className="fas fa-bolt logo-icon"></i> {/* 번개 아이콘 */}
-//         <span>Save</span>
-//       </h1>
-//       <ul className="sidebar-menu">
-//         <li
-//           className={active === '/home' ? 'active' : ''}
-//           onClick={() => handleNavigation('/home')}>
-//           <i className="fas fa-home"></i> Home
-//         </li>
-//         <li
-//           className={active === '/calendar' ? 'active' : ''}
-//           onClick={() => handleNavigation('/calendar')}>
-//           <i className="fas fa-calendar-alt"></i> Calendar
-//         </li>
-//         <li
-//           className={active === '/map' ? 'active' : ''}
-//           onClick={() => handleNavigation('/map')}>
-//           <i className="fas fa-map"></i> Map
-//         </li>
-//         <li
-//           className={active === '/dailyquest' ? 'active' : ''}
-//           onClick={() => handleNavigation('/dailyquest')}>
-//           <i className="fas fa-list-ul"></i> DailyQuest
-//         </li>
-//         <li
-//           className={active === '/settings' ? 'active' : ''}
-//           onClick={() => handleNavigation('/settings')}>
-//           <i className="fas fa-cogs"></i> Settings
-//         </li>
-//         <li
-//           className={active === '/ logout' ? 'active' : ''}
-//           onClick={()=> handleNavigation('/')}>
-//           <i className="fas fa-sign-out-alt"></i> Logout
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default Sidebar;

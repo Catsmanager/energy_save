@@ -1,12 +1,10 @@
-/* src/components/main/Sidebar.css */
-
 .sidebar {
   width: 250px; /* 사이드바의 너비 */
   height: 100vh; /* 화면 전체 높이 */
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #ffffff; /* 사이드바 배경 색상 */
+  background-color: #388e3c; /* 사이드바 배경을 초록색으로 변경 */
   border-right: 0.5px solid rgba(0, 0, 0, 0.1); /* 좌측에 선 그리기 */
   z-index: 500; /* 헤더보다 낮게 설정 */
 }
@@ -24,27 +22,50 @@
 }
 
 .sidebar-menu li {
-  margin: 20px 0; /* 항목 간의 여백 */
+  margin: 25px 0; /* 항목 간의 여백 */
   display: flex; /* 아이템을 수평 정렬 */
   align-items: center; /* 아이콘과 텍스트 세로 정렬 */
   font-size: 17px; /* 아이콘 크기 조정 */
+  color: #ffffff; /* 기본 텍스트를 흰색으로 설정 */
+}
+
+.sidebar-menu li i {
+  margin-right: 35px; /* 아이콘과 텍스트 사이의 간격 조정 */
+  margin-left: 35px; /* 아이콘과 텍스트 사이의 간격 조정 */
+  font-size: 1.3em; /* 아이콘 크기 조정 */
+  width: 30px; /* 아이콘의 고정된 너비 설정 */
+  text-align: center; /* 아이콘을 중앙 정렬 */
+  color: #ffffff; /* 기본 아이콘 색상을 흰색으로 설정 */
 }
 
 .sidebar-menu li:hover {
-  color: #388e3c; /* 텍스트와 아이콘 색상 변경 */
+  
   cursor: pointer; /* 손 모양 커서 */
 }
 
-.sidebar-menu i {
-  margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 조정 */
-  margin-left: 40px; /* 아이콘과 텍스트 사이의 간격 조정 */
-  font-size: 1.3em; /* 아이콘 크기 조정 */
+/* 로고 타이틀 스타일 추가 */
+.sidebar-logo {
+  color: #ffffff; /* 로고 텍스트를 흰색으로 설정 */
+  font-size: 24px; /* 로고 텍스트 크기 */
+  text-align: center; /* 중앙 정렬 */
+  margin: 20px 0; /* 상하 간격 */
 }
 
-.sidebar-menu li.active {
-  color: #388e3c; /* 텍스트와 아이콘을 초록색으로 */
+.sidebar-logo:hover {
+  color: #388e3c; /* 로고 텍스트 호버 시 초록색으로 변경 */
 }
 
-.sidebar-menu li.active i {
-  color: #388e3c; /* 아이콘 색상도 초록색 */
+.logo-title {
+  color: white !important; /* 우선순위 높여서 흰색 적용 */
+  padding: 20px 0;
+}
+
+.divider {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255); /* 얇고 반투명한 흰색 선 */
+  margin: 0 25px; /* 양쪽에 여백 */
+}
+
+.sidebar-menu {
+  padding-top: 20px; /* 분리선과 메뉴 사이 여백 */
 }
