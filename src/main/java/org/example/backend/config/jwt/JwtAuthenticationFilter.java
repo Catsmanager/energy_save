@@ -16,11 +16,13 @@ import org.springframework.web.filter.GenericFilterBean;
 import java.io.IOException;
 import java.util.Collections;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends GenericFilterBean {
 
-    private final JwtFactory jwtFactory; // 생성자 주입을 위한 필드
+    private final JwtFactory jwtFactory;
+    private final JwtBlackList jwtBlacklist = new JwtBlackList(); // JwtBlacklist 인스턴스 생성
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) //  HTTP 요청을 가로채고 JWT를 검사하는 작업을 수행합니다.
@@ -42,8 +44,43 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpRequest));
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
+            else {
+                // 블랙리스트에 있는 경우, 예외 처리
+                httpResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Token is blacklisted");
+                return;
+            }
         }
 
         chain.doFilter(request, response); // 필터 체인의 다음 필터를 호출하여, 요청이 계속 처리
     }
 }
+
+
+
+//@Override
+//    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+//            throws IOException, ServletException {
+//
+//        HttpServletRequest httpRequest = (HttpServletRequest) request;
+//        HttpServletResponse httpResponse = (HttpServletResponse) response;
+//
+//        String token = httpRequest.getHeader("Authorization");
+//        if (token != null && token.startsWith("Bearer ")) {
+//            token = token.substring(7);
+//
+//            if (jwtFactory.validToken(token) && !jwtBlacklist.isTokenBlacklisted(token)) {
+//                String username = jwtFactory.getUserId(token);
+//                UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+//                        username, null, Collections.singleton(new SimpleGrantedAuthority("ROLE_USER")));
+//
+//                authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpRequest));
+//                SecurityContextHolder.getContext().setAuthentication(authentication);
+//            } else {
+//                // 블랙리스트에 있는 경우, 예외 처리
+//                httpResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Token is blacklisted");
+//                return;
+//            }
+//        }
+//
+//        chain.doFilter(request, response);
+//    }

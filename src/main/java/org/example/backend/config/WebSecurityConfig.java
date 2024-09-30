@@ -30,7 +30,7 @@ public class WebSecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/auth/**", "/api/upload", "/api/ocr", "/api/quiz").permitAll()
+                        .requestMatchers("/api/auth/**", "/api/upload", "/api/ocr", "/api/quiz", "/api/checklist/**","/api/attendance/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form

@@ -10,7 +10,6 @@ import org.example.backend.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -18,6 +17,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
     private final JwtFactory jwtFactory;
+
 
     // 주어진 이메일이 이미 존재하는지 확인하는 메소드
     public boolean checkIfEmailExists(String emailId) {
@@ -56,6 +56,14 @@ public class UserService {
         }
 
         // JWT 생성
-        return jwtFactory.createToken(user);
+        String token = jwtFactory.createToken(user);
+        return token;
+    }
+
+    // 이메일로 유저 찾기 메소드 추가
+    public UserDTO getUserByEmail(String emailId) {
+        User user = userRepository.findByEmailId(emailId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        return new UserDTO(user.getEmailId(), user.getUsername(), user.getPassword());
     }
 }
