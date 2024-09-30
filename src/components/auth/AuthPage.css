@@ -79,7 +79,7 @@ body {
 }
 
 .or-separator span {
-  background: #f0f0f0; /* 배경색과 일치시킴 */
+  background: #ffffff; /* 배경색과 일치시킴 */
   padding: 0 10px;
   font-size: 14px;
   color: #787474;

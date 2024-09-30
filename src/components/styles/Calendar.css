@@ -17,7 +17,7 @@
     width: 100%; /* 달력의 전체 너비에 맞춤 */
     background: #ffffff;
     display: flex;
-    justify-content: flex-start; /* 왼쪽 정렬 */
+    justify-content: space-between; /* 버튼과 텍스트를 양쪽에 배치 */
     align-items: center;
     padding: 10px;
     border-bottom:; /* 헤더 아래쪽 테두리 유지 */
@@ -49,15 +49,40 @@ tbody td {
 
 .month-year {
     margin-left: 30px; /* 월과 년도 오른쪽 여백 추가 */
-    font-size: 30px; /* 글씨 크기 설정 */
+    font-size: 35px; /* 글씨 크기 설정 */
     font-weight: bold;
+    text-align: center; /* 글자를 중앙 정렬 */
+    flex: 1; /* 텍스트가 남은 공간을 차지하도록 설정 */
 }
 
 .empty {
     background: #f9f9f9;
 }
 
-.day:hover {
-    background: #f0f0f0;
-    cursor: pointer;
-}
+.award-icon {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .award-icon i {
+    color: green; /* 아이콘 색상 설정 */
+    font-size: 20px; /* 아이콘 크기 설정 */
+  }
+  
+  .check-in-button {
+    background-color: #4CAF50; /* 버튼 배경색 */
+    color: white; /* 글자 색 */
+    border: none; /* 테두리 없애기 */
+    border-radius: 20px; /* 모서리를 둥글게 */
+    padding: 20px 120px; /* 위아래, 좌우 패딩 */
+    font-size: 20px; /* 글자 크기 */
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    transition: background-color 0.3s; /* 호버 시 색상 변화에 부드러운 전환 효과 */
+    margin-bottom: 40px; /* 아래 여백 추가 */
+  }
+  
+  .check-in-button:hover {
+    background-color: #45a049; /* 호버 시 배경색 변화 */
+  }
+  

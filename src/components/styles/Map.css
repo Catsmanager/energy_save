@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    padding: 20px;
+  }
+  #map {
+    height: 500px;
+    border: 1px solid #000;
+  }
+  .geolocation_button {
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+  
+  .badge {
+    padding: 6px 2px;
+    font-size: 14px;
+    text-align: center;
+    width: 150px;
+  }

@@ -5,6 +5,7 @@ function Profile() {
   return (
     <div>
         <Header/>
+        <h2>Profile Page</h2>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import ProgressBar from '../../components/main/ProgressBar'; // ProgressBar 가져오기
-import '../styles/DailyQuest.css';
+import '../mobile/DailyQuest.css';
 
 const DailyQuest = () => {
   const navigate = useNavigate();

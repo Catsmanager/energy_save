@@ -40,3 +40,11 @@
   margin-left: 40px; /* 아이콘과 텍스트 사이의 간격 조정 */
   font-size: 1.3em; /* 아이콘 크기 조정 */
 }
+
+.sidebar-menu li.active {
+  color: #388e3c; /* 텍스트와 아이콘을 초록색으로 */
+}
+
+.sidebar-menu li.active i {
+  color: #388e3c; /* 아이콘 색상도 초록색 */
+}
