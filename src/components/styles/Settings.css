@@ -1,0 +1,163 @@
+/* 설정 페이지 컨테이너 */
+.settings-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 타이틀 스타일링 */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* 폼 스타일 */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+}
+
+input[type="checkbox"],
+select,
+input[type="radio"] {
+  margin-top: 8px;
+}
+
+/* 라디오 버튼 그룹 */
+.radio-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* 저장 버튼 스타일링 */
+.submit-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* 테마에 따른 버튼 스타일 */
+.submit-btn.light {
+  background-color: #007BFF;
+  color: white;
+}
+
+.submit-btn.dark {
+  background-color: #444444;  
+  color: #e0e0e0;      
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* 초기화 버튼 스타일링 */
+.reset-btn {
+  padding: 12px 20px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #ddd;
+  border-color: #555;
+}
+
+/* 성공 메시지 스타일 */
+.success-message {
+  text-align: center;
+  color: green;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* 알림 미리보기 스타일 */
+.notification-preview {
+  text-align: center;
+  color: #007BFF;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+/* 다크 모드용 스타일 */
+.submit-btn.dark {
+  background-color: #444444;  /* 버튼의 기본 색상 */
+  color: #e0e0e0;             /* 텍스트 색상 */
+}
+
+.submit-btn.dark:hover {
+  background-color: #555555;  /* hover 시 더 밝은 회색 */
+}
+
+
+body.dark-mode {
+  background-color: #1e1e1e; 
+}
+
+
+.notification-preview {
+  color: #4a90e2;  /
+}
+
+
+.form-group {
+  background-color: #252525;  
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
+.reset-btn {
+  background-color: #2a2a2a;  
+  color: #e0e0e0;            
+  border: 1px solid #555555; 
+}
+
+.reset-btn:hover {
+  background-color: #3a3a3a; 
+  border-color: #666666;
+}
+
+
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .submit-btn, .reset-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}

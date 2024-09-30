@@ -1,0 +1,114 @@
+/* 프로필 설정 페이지 전체 레이아웃 */
+.profile-container {
+  max-width: 400px;
+  margin-top: 30px; 
+  margin : 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+}
+/* 헤더와 페이지 상단 사이에 간격을 추가 */
+.profile-container h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 50px; 
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus {
+  border-color: #007BFF;
+}
+
+.profile-image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.image-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #ddd;
+}
+
+.remove-image-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-image-btn:hover {
+  background-color: #e53935;
+}
+
+.submit-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: green;
+}
