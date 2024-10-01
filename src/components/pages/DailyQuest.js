@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import ProgressBar from '../../components/main/ProgressBar'; // ProgressBar 가져오기
+import '../styles/DailyQuest.css';
 import '../mobile/DailyQuest.css';
 
 const DailyQuest = () => {
@@ -29,7 +30,7 @@ const DailyQuest = () => {
   }, [quests]);
 
   return (
-    <div>
+    <div className="daily-quest-page">
       <Header />
       <div className="main-content">
         <div className="daily-quest">
@@ -42,17 +43,16 @@ const DailyQuest = () => {
                 className="quest-item"
                 onClick={() => {
                   if (quest.link) {
-                    navigate(quest.link); // 링크가 있는 퀘스트를 클릭하면 해당 페이지로 이동
+                    navigate(quest.link);
                   }
                 }}
-                style={{ cursor: quest.link ? 'pointer' : 'default' }} // 링크가 있는 항목에만 커서 스타일을 변경
+                style={{ cursor: quest.link ? 'pointer' : 'default' }}
               >
                 <span className="task">{quest.task}</span>
                 <span className="reward">{quest.reward} 포인트</span>
               </div>
             ))}
             <h2>진행 상태</h2>
-            {/* 진행 상태를 표시하는 ProgressBar 컴포넌트 */}
             <ProgressBar progress={progress} />
           </div>
         </div>

@@ -79,7 +79,8 @@ tbody td {
     font-size: 20px; /* 글자 크기 */
     cursor: pointer; /* 커서를 포인터로 변경 */
     transition: background-color 0.3s; /* 호버 시 색상 변화에 부드러운 전환 효과 */
-    margin-bottom: 40px; /* 아래 여백 추가 */
+    margin-top: 40px; /* 위쪽 여백 추가 */
+    margin-bottom: 25px; /* 아래 여백 추가 */
   }
   
   .check-in-button:hover {

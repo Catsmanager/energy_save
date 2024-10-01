@@ -1,0 +1,77 @@
+/* PC 화면에서만 적용되는 스타일 */
+@media (min-width: 768px) {
+    .daily-quest-page .main-content { /* 고유 클래스와 함께 사용 */
+        max-width: 800px; /* 최대 너비 설정 */
+        margin: 0px auto 0;  /* 중앙 정렬 */
+        padding: 20px; /* 내부 여백 */
+        border-radius: 8px; /* 모서리 둥글게 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+        background-color: #ffffff; /* 흰색 배경 */
+    }
+
+    .daily-quest-page { /* 고유 클래스에 대한 스타일 정의 */
+        background-color: #ecececbe; /* 부드러운 배경색 */
+        font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+        margin: 0; /* 기본 마진 제거 */
+        padding: 0px; /* 전체 여백 */
+        padding-top: 60px; /* 헤더 높이만큼 상단 여백 추가 */
+        min-height: 93.2vh; /* 브라우저 창의 전체 높이를 차지 */
+        padding-left: 250px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
+        margin-top: -10px; /* 상단 여백을 없애면서 내용과 헤더를 밀착시킴 */
+    }
+
+    /* 퀘스트 리스트 스타일 */
+    .daily-quest-page .daily-quest { /* 고유 클래스와 함께 사용 */
+        margin-top: 20px; /* 상단 여백 */
+    }
+
+    .daily-quest-page .quest-list { /* 고유 클래스와 함께 사용 */
+        margin: 20px 0; /* 퀘스트 리스트 여백 */
+    }
+
+    .daily-quest-page .quest-item { /* 고유 클래스와 함께 사용 */
+        display: flex; /* 플렉스박스 레이아웃 */
+        justify-content: space-between; /* 양쪽 끝 정렬 */
+        align-items: center; /* 수직 중앙 정렬 */
+        padding: 15px; /* 내부 여백 */
+        margin: 10px 0; /* 항목 간 여백 */
+        border: 1px solid #dddddd; /* 경계선 */
+        border-radius: 5px; /* 모서리 둥글게 */
+        transition: background-color 0.3s; /* 호버 효과 부드럽게 */
+    }
+
+    .daily-quest-page .quest-item:hover { /* 고유 클래스와 함께 사용 */
+        background-color: #f1f1f1; /* 호버 시 배경색 변경 */
+    }
+
+    .daily-quest-page .task { /* 고유 클래스와 함께 사용 */
+        font-size: 16px; /* 퀘스트 제목 크기 */
+        color: #333333; /* 텍스트 색상 */
+    }
+
+    .daily-quest-page .reward { /* 고유 클래스와 함께 사용 */
+        font-size: 16px; /* 보상 텍스트 크기 */
+        color: #28a745; /* 포인트 색상 */
+        font-weight: bold; /* 굵게 표시 */
+    }
+
+    /* 진행 상태 스타일 */
+    .daily-quest-page h2 { /* 고유 클래스와 함께 사용 */
+        margin-top: 20px; /* 상단 여백 */
+    }
+
+    .daily-quest-page .progress-bar { /* 고유 클래스와 함께 사용 */
+        height: 20px; /* 진행 상태 바 높이 */
+        border-radius: 5px; /* 모서리 둥글게 */
+        background-color: #e9ecef; /* 기본 배경색 */
+        margin-top: 5px; /* 상단 여백 */
+    }
+
+    .daily-quest-page .progress { /* 고유 클래스와 함께 사용 */
+        height: 100%; /* 바의 높이를 100%로 설정 */
+        border-radius: 5px; /* 모서리 둥글게 */
+        background-color: #28a745; /* 진행 상태 바 색상 */
+        transition: width 0.3s; /* 너비 변경 시 부드러운 애니메이션 */
+    }
+    
+}

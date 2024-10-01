@@ -1,62 +1,64 @@
-.daily-quest {
+/* 모바일 화면에서만 적용되는 스타일 */
+@media (max-width: 768px) {
+  .daily-quest {
     padding: 20px;
-    background-color: #f8f4e8;
-    border-radius: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-    font-family: 'Arial', sans-serif;
+    background-color: #f8f4e8; /* 부드러운 배경색 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    max-width: 400px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    font-family: 'Arial', sans-serif; /* 기본 폰트 설정 */
   }
-  
+
   .main-content {
     padding-top: 60px; /* 헤더 높이만큼 상단 여백을 추가 */
-}
+  }
 
   .tabs {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    display: flex; /* 플렉스 박스 레이아웃 */
+    justify-content: space-around; /* 양쪽 끝 정렬 */
+    margin-bottom: 20px; /* 하단 여백 */
   }
-  
+
   .tabs button {
-    background-color: #e8e4d8;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #e8e4d8; /* 버튼 배경색 */
+    border: none; /* 경계선 제거 */
+    padding: 10px; /* 내부 여백 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    cursor: pointer; /* 포인터 커서 */
   }
-  
+
   .tabs button:hover {
-    background-color: #d8d4c8;
+    background-color: #d8d4c8; /* 호버 시 배경색 변경 */
   }
-  
+
   .quest-list h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 18px; /* 제목 크기 */
+    margin-bottom: 10px; /* 하단 여백 */
   }
-  
+
   .quest-list p {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 20px;
+    font-size: 12px; /* 설명 텍스트 크기 */
+    color: #888; /* 설명 텍스트 색상 */
+    margin-bottom: 20px; /* 하단 여백 */
   }
-  
+
   .quest-item {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* 플렉스 박스 레이아웃 */
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    background-color: #fff; /* 흰색 배경 */
+    padding: 10px; /* 내부 여백 */
+    margin-bottom: 10px; /* 항목 간 여백 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
   }
-  
+
   .task {
-    font-size: 14px;
-    color: #333;
+    font-size: 14px; /* 퀘스트 제목 크기 */
+    color: #333; /* 텍스트 색상 */
   }
-  
+
   .reward {
-    font-size: 14px;
-    color: #4caf50;
+    font-size: 14px; /* 보상 텍스트 크기 */
+    color: #4caf50; /* 포인트 색상 */
   }
-  
+}
